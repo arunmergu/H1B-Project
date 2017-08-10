@@ -1,0 +1,7 @@
+
+1. IMPORTING DATA FROM HIVE
+sqoop import --connect jdbc:mysql://localhost/h1b --username "root" --password "rockstar" --table h1b --hive-import --hive-table h1b -m 1;
+
+2. EXPORTING DATA 
+sqoop export -m 1 --connect jdbc:mysql://localhost/h1b --username "root" --password "rockstar" --table h1b --export-dir /user/hive/warehouse/h1b/h1b_cpy2/*
+
